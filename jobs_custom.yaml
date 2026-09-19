@@ -1,0 +1,2158 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-1-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '8'
+        gradient_update_size: '173'
+        loss_reduction_rate: '0.85'
+        matrix_size: '259'
+        model_partitions: '2'
+        train_time: '7'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '259'
+        - name: TRAIN_TIME
+          value: '7'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.85'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '173'
+        - name: CHECKPOINT_FREQUENCY
+          value: '8'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-2-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '9'
+        gradient_update_size: '109'
+        loss_reduction_rate: '0.8'
+        matrix_size: '274'
+        model_partitions: '2'
+        train_time: '8'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '274'
+        - name: TRAIN_TIME
+          value: '8'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.8'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '109'
+        - name: CHECKPOINT_FREQUENCY
+          value: '9'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-3-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '8'
+        gradient_update_size: '380'
+        loss_reduction_rate: '0.81'
+        matrix_size: '397'
+        model_partitions: '2'
+        train_time: '7'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '397'
+        - name: TRAIN_TIME
+          value: '7'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.81'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '380'
+        - name: CHECKPOINT_FREQUENCY
+          value: '8'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-4-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '8'
+        gradient_update_size: '163'
+        loss_reduction_rate: '0.93'
+        matrix_size: '295'
+        model_partitions: '1'
+        train_time: '5'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '295'
+        - name: TRAIN_TIME
+          value: '5'
+        - name: MODEL_PARTITIONS
+          value: '1'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.93'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '163'
+        - name: CHECKPOINT_FREQUENCY
+          value: '8'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-5-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '6'
+        gradient_update_size: '353'
+        loss_reduction_rate: '0.76'
+        matrix_size: '274'
+        model_partitions: '2'
+        train_time: '6'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '274'
+        - name: TRAIN_TIME
+          value: '6'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.76'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '353'
+        - name: CHECKPOINT_FREQUENCY
+          value: '6'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-6-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '5'
+        gradient_update_size: '292'
+        loss_reduction_rate: '0.79'
+        matrix_size: '379'
+        model_partitions: '1'
+        train_time: '7'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '379'
+        - name: TRAIN_TIME
+          value: '7'
+        - name: MODEL_PARTITIONS
+          value: '1'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.79'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '292'
+        - name: CHECKPOINT_FREQUENCY
+          value: '5'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-7-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '6'
+        gradient_update_size: '131'
+        loss_reduction_rate: '0.59'
+        matrix_size: '398'
+        model_partitions: '2'
+        train_time: '5'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '398'
+        - name: TRAIN_TIME
+          value: '5'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.59'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '131'
+        - name: CHECKPOINT_FREQUENCY
+          value: '6'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-8-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '9'
+        gradient_update_size: '152'
+        loss_reduction_rate: '0.76'
+        matrix_size: '320'
+        model_partitions: '1'
+        train_time: '5'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '320'
+        - name: TRAIN_TIME
+          value: '5'
+        - name: MODEL_PARTITIONS
+          value: '1'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.76'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '152'
+        - name: CHECKPOINT_FREQUENCY
+          value: '9'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-9-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '7'
+        gradient_update_size: '269'
+        loss_reduction_rate: '0.73'
+        matrix_size: '274'
+        model_partitions: '2'
+        train_time: '9'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '274'
+        - name: TRAIN_TIME
+          value: '9'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.73'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '269'
+        - name: CHECKPOINT_FREQUENCY
+          value: '7'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-10-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '5'
+        gradient_update_size: '263'
+        loss_reduction_rate: '0.92'
+        matrix_size: '292'
+        model_partitions: '2'
+        train_time: '6'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '292'
+        - name: TRAIN_TIME
+          value: '6'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.92'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '263'
+        - name: CHECKPOINT_FREQUENCY
+          value: '5'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-11-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '9'
+        gradient_update_size: '136'
+        loss_reduction_rate: '0.59'
+        matrix_size: '344'
+        model_partitions: '1'
+        train_time: '10'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '344'
+        - name: TRAIN_TIME
+          value: '10'
+        - name: MODEL_PARTITIONS
+          value: '1'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.59'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '136'
+        - name: CHECKPOINT_FREQUENCY
+          value: '9'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-12-light-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '10'
+        gradient_update_size: '285'
+        loss_reduction_rate: '0.95'
+        matrix_size: '326'
+        model_partitions: '2'
+        train_time: '8'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '326'
+        - name: TRAIN_TIME
+          value: '8'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.95'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '285'
+        - name: CHECKPOINT_FREQUENCY
+          value: '10'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-13-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '5'
+        gradient_update_size: '1416'
+        loss_reduction_rate: '0.49'
+        matrix_size: '1021'
+        model_partitions: '4'
+        train_time: '35'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1021'
+        - name: TRAIN_TIME
+          value: '35'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.49'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1416'
+        - name: CHECKPOINT_FREQUENCY
+          value: '5'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-14-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '10'
+        gradient_update_size: '1480'
+        loss_reduction_rate: '0.23'
+        matrix_size: '1065'
+        model_partitions: '3'
+        train_time: '40'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1065'
+        - name: TRAIN_TIME
+          value: '40'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.23'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1480'
+        - name: CHECKPOINT_FREQUENCY
+          value: '10'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-15-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '8'
+        gradient_update_size: '1348'
+        loss_reduction_rate: '0.23'
+        matrix_size: '1293'
+        model_partitions: '4'
+        train_time: '29'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1293'
+        - name: TRAIN_TIME
+          value: '29'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.23'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1348'
+        - name: CHECKPOINT_FREQUENCY
+          value: '8'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-16-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '5'
+        gradient_update_size: '908'
+        loss_reduction_rate: '0.24'
+        matrix_size: '1300'
+        model_partitions: '3'
+        train_time: '21'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1300'
+        - name: TRAIN_TIME
+          value: '21'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.24'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '908'
+        - name: CHECKPOINT_FREQUENCY
+          value: '5'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-17-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '5'
+        gradient_update_size: '1145'
+        loss_reduction_rate: '0.5'
+        matrix_size: '1376'
+        model_partitions: '5'
+        train_time: '20'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1376'
+        - name: TRAIN_TIME
+          value: '20'
+        - name: MODEL_PARTITIONS
+          value: '5'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.5'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1145'
+        - name: CHECKPOINT_FREQUENCY
+          value: '5'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-18-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '7'
+        gradient_update_size: '1267'
+        loss_reduction_rate: '0.28'
+        matrix_size: '1272'
+        model_partitions: '4'
+        train_time: '35'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1272'
+        - name: TRAIN_TIME
+          value: '35'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.28'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1267'
+        - name: CHECKPOINT_FREQUENCY
+          value: '7'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-19-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '10'
+        gradient_update_size: '1011'
+        loss_reduction_rate: '0.23'
+        matrix_size: '1044'
+        model_partitions: '4'
+        train_time: '21'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1044'
+        - name: TRAIN_TIME
+          value: '21'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.23'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1011'
+        - name: CHECKPOINT_FREQUENCY
+          value: '10'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-20-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '9'
+        gradient_update_size: '1408'
+        loss_reduction_rate: '0.32'
+        matrix_size: '1099'
+        model_partitions: '4'
+        train_time: '38'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1099'
+        - name: TRAIN_TIME
+          value: '38'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.32'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1408'
+        - name: CHECKPOINT_FREQUENCY
+          value: '9'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-21-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '6'
+        gradient_update_size: '853'
+        loss_reduction_rate: '0.32'
+        matrix_size: '1467'
+        model_partitions: '5'
+        train_time: '30'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1467'
+        - name: TRAIN_TIME
+          value: '30'
+        - name: MODEL_PARTITIONS
+          value: '5'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.32'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '853'
+        - name: CHECKPOINT_FREQUENCY
+          value: '6'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-22-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '10'
+        gradient_update_size: '852'
+        loss_reduction_rate: '0.41'
+        matrix_size: '1091'
+        model_partitions: '3'
+        train_time: '26'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1091'
+        - name: TRAIN_TIME
+          value: '26'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.41'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '852'
+        - name: CHECKPOINT_FREQUENCY
+          value: '10'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-23-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '6'
+        gradient_update_size: '992'
+        loss_reduction_rate: '0.27'
+        matrix_size: '1490'
+        model_partitions: '4'
+        train_time: '29'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1490'
+        - name: TRAIN_TIME
+          value: '29'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.27'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '992'
+        - name: CHECKPOINT_FREQUENCY
+          value: '6'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-24-heavy-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '9'
+        gradient_update_size: '1269'
+        loss_reduction_rate: '0.27'
+        matrix_size: '1421'
+        model_partitions: '3'
+        train_time: '32'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '1421'
+        - name: TRAIN_TIME
+          value: '32'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.27'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '1269'
+        - name: CHECKPOINT_FREQUENCY
+          value: '9'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-25-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '3'
+        gradient_update_size: '613'
+        loss_reduction_rate: '0.21'
+        matrix_size: '524'
+        model_partitions: '4'
+        train_time: '15'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '524'
+        - name: TRAIN_TIME
+          value: '15'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.21'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '613'
+        - name: CHECKPOINT_FREQUENCY
+          value: '3'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-26-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '1'
+        gradient_update_size: '434'
+        loss_reduction_rate: '0.37'
+        matrix_size: '720'
+        model_partitions: '2'
+        train_time: '18'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '720'
+        - name: TRAIN_TIME
+          value: '18'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.37'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '434'
+        - name: CHECKPOINT_FREQUENCY
+          value: '1'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-27-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '1'
+        gradient_update_size: '303'
+        loss_reduction_rate: '0.25'
+        matrix_size: '614'
+        model_partitions: '4'
+        train_time: '27'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '614'
+        - name: TRAIN_TIME
+          value: '27'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.25'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '303'
+        - name: CHECKPOINT_FREQUENCY
+          value: '1'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-28-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '1'
+        gradient_update_size: '512'
+        loss_reduction_rate: '0.37'
+        matrix_size: '556'
+        model_partitions: '3'
+        train_time: '18'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '556'
+        - name: TRAIN_TIME
+          value: '18'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.37'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '512'
+        - name: CHECKPOINT_FREQUENCY
+          value: '1'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-29-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '1'
+        gradient_update_size: '492'
+        loss_reduction_rate: '0.2'
+        matrix_size: '608'
+        model_partitions: '3'
+        train_time: '18'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '608'
+        - name: TRAIN_TIME
+          value: '18'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.2'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '492'
+        - name: CHECKPOINT_FREQUENCY
+          value: '1'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-30-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '3'
+        gradient_update_size: '576'
+        loss_reduction_rate: '0.36'
+        matrix_size: '580'
+        model_partitions: '2'
+        train_time: '23'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '580'
+        - name: TRAIN_TIME
+          value: '23'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.36'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '576'
+        - name: CHECKPOINT_FREQUENCY
+          value: '3'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-31-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '1'
+        gradient_update_size: '322'
+        loss_reduction_rate: '0.26'
+        matrix_size: '677'
+        model_partitions: '3'
+        train_time: '22'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '677'
+        - name: TRAIN_TIME
+          value: '22'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.26'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '322'
+        - name: CHECKPOINT_FREQUENCY
+          value: '1'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-32-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '2'
+        gradient_update_size: '337'
+        loss_reduction_rate: '0.45'
+        matrix_size: '622'
+        model_partitions: '4'
+        train_time: '23'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '622'
+        - name: TRAIN_TIME
+          value: '23'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.45'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '337'
+        - name: CHECKPOINT_FREQUENCY
+          value: '2'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-33-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '3'
+        gradient_update_size: '305'
+        loss_reduction_rate: '0.3'
+        matrix_size: '586'
+        model_partitions: '2'
+        train_time: '19'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '586'
+        - name: TRAIN_TIME
+          value: '19'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.3'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '305'
+        - name: CHECKPOINT_FREQUENCY
+          value: '3'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-34-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '2'
+        gradient_update_size: '642'
+        loss_reduction_rate: '0.29'
+        matrix_size: '621'
+        model_partitions: '3'
+        train_time: '19'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '621'
+        - name: TRAIN_TIME
+          value: '19'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.29'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '642'
+        - name: CHECKPOINT_FREQUENCY
+          value: '2'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-35-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '3'
+        gradient_update_size: '457'
+        loss_reduction_rate: '0.49'
+        matrix_size: '685'
+        model_partitions: '4'
+        train_time: '30'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '685'
+        - name: TRAIN_TIME
+          value: '30'
+        - name: MODEL_PARTITIONS
+          value: '4'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.49'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '457'
+        - name: CHECKPOINT_FREQUENCY
+          value: '3'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-36-io-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '3'
+        gradient_update_size: '565'
+        loss_reduction_rate: '0.42'
+        matrix_size: '624'
+        model_partitions: '2'
+        train_time: '28'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '624'
+        - name: TRAIN_TIME
+          value: '28'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.42'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '565'
+        - name: CHECKPOINT_FREQUENCY
+          value: '3'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-37-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '10'
+        gradient_update_size: '312'
+        loss_reduction_rate: '0.08'
+        matrix_size: '454'
+        model_partitions: '1'
+        train_time: '29'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '454'
+        - name: TRAIN_TIME
+          value: '29'
+        - name: MODEL_PARTITIONS
+          value: '1'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.08'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '312'
+        - name: CHECKPOINT_FREQUENCY
+          value: '10'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-38-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '6'
+        gradient_update_size: '634'
+        loss_reduction_rate: '0.1'
+        matrix_size: '604'
+        model_partitions: '1'
+        train_time: '27'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '604'
+        - name: TRAIN_TIME
+          value: '27'
+        - name: MODEL_PARTITIONS
+          value: '1'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.1'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '634'
+        - name: CHECKPOINT_FREQUENCY
+          value: '6'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-39-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '8'
+        gradient_update_size: '548'
+        loss_reduction_rate: '0.06'
+        matrix_size: '450'
+        model_partitions: '2'
+        train_time: '26'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '450'
+        - name: TRAIN_TIME
+          value: '26'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.06'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '548'
+        - name: CHECKPOINT_FREQUENCY
+          value: '8'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-40-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '10'
+        gradient_update_size: '526'
+        loss_reduction_rate: '0.07'
+        matrix_size: '476'
+        model_partitions: '2'
+        train_time: '27'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '476'
+        - name: TRAIN_TIME
+          value: '27'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.07'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '526'
+        - name: CHECKPOINT_FREQUENCY
+          value: '10'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-41-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '7'
+        gradient_update_size: '464'
+        loss_reduction_rate: '0.06'
+        matrix_size: '527'
+        model_partitions: '2'
+        train_time: '29'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '527'
+        - name: TRAIN_TIME
+          value: '29'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.06'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '464'
+        - name: CHECKPOINT_FREQUENCY
+          value: '7'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-42-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '8'
+        gradient_update_size: '657'
+        loss_reduction_rate: '0.09'
+        matrix_size: '493'
+        model_partitions: '2'
+        train_time: '28'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '493'
+        - name: TRAIN_TIME
+          value: '28'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.09'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '657'
+        - name: CHECKPOINT_FREQUENCY
+          value: '8'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-43-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '6'
+        gradient_update_size: '537'
+        loss_reduction_rate: '0.06'
+        matrix_size: '479'
+        model_partitions: '2'
+        train_time: '31'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '479'
+        - name: TRAIN_TIME
+          value: '31'
+        - name: MODEL_PARTITIONS
+          value: '2'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.06'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '537'
+        - name: CHECKPOINT_FREQUENCY
+          value: '6'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-44-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '7'
+        gradient_update_size: '603'
+        loss_reduction_rate: '0.06'
+        matrix_size: '477'
+        model_partitions: '3'
+        train_time: '38'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '477'
+        - name: TRAIN_TIME
+          value: '38'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.06'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '603'
+        - name: CHECKPOINT_FREQUENCY
+          value: '7'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-45-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '6'
+        gradient_update_size: '455'
+        loss_reduction_rate: '0.1'
+        matrix_size: '563'
+        model_partitions: '1'
+        train_time: '26'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '563'
+        - name: TRAIN_TIME
+          value: '26'
+        - name: MODEL_PARTITIONS
+          value: '1'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.1'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '455'
+        - name: CHECKPOINT_FREQUENCY
+          value: '6'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-46-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '9'
+        gradient_update_size: '628'
+        loss_reduction_rate: '0.06'
+        matrix_size: '454'
+        model_partitions: '3'
+        train_time: '29'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '454'
+        - name: TRAIN_TIME
+          value: '29'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.06'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '628'
+        - name: CHECKPOINT_FREQUENCY
+          value: '9'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-47-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '8'
+        gradient_update_size: '555'
+        loss_reduction_rate: '0.06'
+        matrix_size: '583'
+        model_partitions: '3'
+        train_time: '31'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '583'
+        - name: TRAIN_TIME
+          value: '31'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.06'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '555'
+        - name: CHECKPOINT_FREQUENCY
+          value: '8'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-48-slow-custom
+spec:
+  backoffLimit: 0
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      annotations:
+        checkpoint_frequency: '10'
+        gradient_update_size: '354'
+        loss_reduction_rate: '0.09'
+        matrix_size: '447'
+        model_partitions: '3'
+        train_time: '33'
+    spec:
+      containers:
+      - env:
+        - name: MATRIX_SIZE
+          value: '447'
+        - name: TRAIN_TIME
+          value: '33'
+        - name: MODEL_PARTITIONS
+          value: '3'
+        - name: LOSS_REDUCTION_RATE
+          value: '0.09'
+        - name: GRADIENT_UPDATE_SIZE
+          value: '354'
+        - name: CHECKPOINT_FREQUENCY
+          value: '10'
+        - name: USE_EXECUTION_GATE
+          value: 'true'
+        - name: EXECUTION_GATE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['execution_gate']
+        image: micksempar/ml-training:latest
+        imagePullPolicy: IfNotPresent
+        name: ml-task
+      restartPolicy: Never
+      schedulerName: custom-scheduler

@@ -1,0 +1,448 @@
+{
+    "scheduler": "custom",
+    "job_metrics": [
+        {
+            "name": "ml-job-1-light-custom",
+            "JCT": 16.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 16.0,
+            "creation_time": 1778290711.0,
+            "start_time": 1778290711.0,
+            "completion_time": 1778290727.0
+        },
+        {
+            "name": "ml-job-10-light-custom",
+            "JCT": 26.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 26.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290738.0
+        },
+        {
+            "name": "ml-job-11-light-custom",
+            "JCT": 56.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 56.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290768.0
+        },
+        {
+            "name": "ml-job-12-light-custom",
+            "JCT": 10.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 10.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290722.0
+        },
+        {
+            "name": "ml-job-13-heavy-custom",
+            "JCT": 290.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 290.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291002.0
+        },
+        {
+            "name": "ml-job-14-heavy-custom",
+            "JCT": 467.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 467.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291179.0
+        },
+        {
+            "name": "ml-job-15-heavy-custom",
+            "JCT": 496.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 496.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291208.0
+        },
+        {
+            "name": "ml-job-16-heavy-custom",
+            "JCT": 455.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 455.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291167.0
+        },
+        {
+            "name": "ml-job-17-heavy-custom",
+            "JCT": 360.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 360.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291072.0
+        },
+        {
+            "name": "ml-job-18-heavy-custom",
+            "JCT": 478.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 478.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291190.0
+        },
+        {
+            "name": "ml-job-19-heavy-custom",
+            "JCT": 332.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 332.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291044.0
+        },
+        {
+            "name": "ml-job-2-light-custom",
+            "JCT": 32.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 32.0,
+            "creation_time": 1778290711.0,
+            "start_time": 1778290711.0,
+            "completion_time": 1778290743.0
+        },
+        {
+            "name": "ml-job-20-heavy-custom",
+            "JCT": 344.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 344.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291056.0
+        },
+        {
+            "name": "ml-job-21-heavy-custom",
+            "JCT": 493.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 493.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291205.0
+        },
+        {
+            "name": "ml-job-22-heavy-custom",
+            "JCT": 228.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 228.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290940.0
+        },
+        {
+            "name": "ml-job-23-heavy-custom",
+            "JCT": 496.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 496.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778291208.0
+        },
+        {
+            "name": "ml-job-24-heavy-custom",
+            "JCT": 460.0,
+            "Waiting Time": 1.0,
+            "flow_jct": 461.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290713.0,
+            "completion_time": 1778291173.0
+        },
+        {
+            "name": "ml-job-25-io-custom",
+            "JCT": 126.0,
+            "Waiting Time": 1.0,
+            "flow_jct": 127.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290713.0,
+            "completion_time": 1778290839.0
+        },
+        {
+            "name": "ml-job-26-io-custom",
+            "JCT": 92.0,
+            "Waiting Time": 1.0,
+            "flow_jct": 93.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290713.0,
+            "completion_time": 1778290805.0
+        },
+        {
+            "name": "ml-job-27-io-custom",
+            "JCT": 198.0,
+            "Waiting Time": 1.0,
+            "flow_jct": 199.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290713.0,
+            "completion_time": 1778290911.0
+        },
+        {
+            "name": "ml-job-28-io-custom",
+            "JCT": 72.0,
+            "Waiting Time": 1.0,
+            "flow_jct": 73.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290713.0,
+            "completion_time": 1778290785.0
+        },
+        {
+            "name": "ml-job-29-io-custom",
+            "JCT": 147.0,
+            "Waiting Time": 1.0,
+            "flow_jct": 148.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290713.0,
+            "completion_time": 1778290860.0
+        },
+        {
+            "name": "ml-job-3-light-custom",
+            "JCT": 47.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 47.0,
+            "creation_time": 1778290711.0,
+            "start_time": 1778290711.0,
+            "completion_time": 1778290758.0
+        },
+        {
+            "name": "ml-job-30-io-custom",
+            "JCT": 87.0,
+            "Waiting Time": 1.0,
+            "flow_jct": 88.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290713.0,
+            "completion_time": 1778290800.0
+        },
+        {
+            "name": "ml-job-31-io-custom",
+            "JCT": 153.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 155.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290867.0
+        },
+        {
+            "name": "ml-job-32-io-custom",
+            "JCT": 86.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 88.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290800.0
+        },
+        {
+            "name": "ml-job-33-io-custom",
+            "JCT": 74.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 76.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290788.0
+        },
+        {
+            "name": "ml-job-34-io-custom",
+            "JCT": 118.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 120.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290832.0
+        },
+        {
+            "name": "ml-job-35-io-custom",
+            "JCT": 126.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 128.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290840.0
+        },
+        {
+            "name": "ml-job-36-io-custom",
+            "JCT": 94.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 96.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290808.0
+        },
+        {
+            "name": "ml-job-37-slow-custom",
+            "JCT": 128.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 130.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290842.0
+        },
+        {
+            "name": "ml-job-38-slow-custom",
+            "JCT": 193.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 195.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290714.0,
+            "completion_time": 1778290907.0
+        },
+        {
+            "name": "ml-job-39-slow-custom",
+            "JCT": 159.0,
+            "Waiting Time": 3.0,
+            "flow_jct": 162.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290874.0
+        },
+        {
+            "name": "ml-job-4-light-custom",
+            "JCT": 5.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 5.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290717.0
+        },
+        {
+            "name": "ml-job-40-slow-custom",
+            "JCT": 155.0,
+            "Waiting Time": 3.0,
+            "flow_jct": 158.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290870.0
+        },
+        {
+            "name": "ml-job-41-slow-custom",
+            "JCT": 211.0,
+            "Waiting Time": 3.0,
+            "flow_jct": 214.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290926.0
+        },
+        {
+            "name": "ml-job-42-slow-custom",
+            "JCT": 172.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 174.0,
+            "creation_time": 1778290713.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290887.0
+        },
+        {
+            "name": "ml-job-43-slow-custom",
+            "JCT": 230.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 232.0,
+            "creation_time": 1778290713.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290945.0
+        },
+        {
+            "name": "ml-job-44-slow-custom",
+            "JCT": 293.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 295.0,
+            "creation_time": 1778290713.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778291008.0
+        },
+        {
+            "name": "ml-job-45-slow-custom",
+            "JCT": 159.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 161.0,
+            "creation_time": 1778290713.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290874.0
+        },
+        {
+            "name": "ml-job-46-slow-custom",
+            "JCT": 224.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 226.0,
+            "creation_time": 1778290713.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290939.0
+        },
+        {
+            "name": "ml-job-47-slow-custom",
+            "JCT": 287.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 289.0,
+            "creation_time": 1778290713.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778291002.0
+        },
+        {
+            "name": "ml-job-48-slow-custom",
+            "JCT": 189.0,
+            "Waiting Time": 2.0,
+            "flow_jct": 191.0,
+            "creation_time": 1778290713.0,
+            "start_time": 1778290715.0,
+            "completion_time": 1778290904.0
+        },
+        {
+            "name": "ml-job-5-light-custom",
+            "JCT": 36.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 36.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290748.0
+        },
+        {
+            "name": "ml-job-6-light-custom",
+            "JCT": 41.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 41.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290753.0
+        },
+        {
+            "name": "ml-job-7-light-custom",
+            "JCT": 63.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 63.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290775.0
+        },
+        {
+            "name": "ml-job-8-light-custom",
+            "JCT": 20.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 20.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290732.0
+        },
+        {
+            "name": "ml-job-9-light-custom",
+            "JCT": 51.0,
+            "Waiting Time": 0.0,
+            "flow_jct": 51.0,
+            "creation_time": 1778290712.0,
+            "start_time": 1778290712.0,
+            "completion_time": 1778290763.0
+        }
+    ],
+    "avg_jct": 189.0625,
+    "avg_flow_jct": 190.02083333333334,
+    "avg_waiting": 0.9583333333333334,
+    "min_jct": 5.0,
+    "max_jct": 496.0,
+    "tail_latency_95th": 487.75,
+    "makespan": 497.0,
+    "execution_window": 497.0,
+    "avg_scheduling_delay": 0.9583333333333334,
+    "throughput": 0.096579476861167,
+    "avg_ilt": 7.072483723404255
+}

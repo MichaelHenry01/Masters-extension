@@ -1,0 +1,15 @@
+# Use Python as the base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the scheduler script
+COPY . /app/
+
+# Install Kubernetes Python client
+RUN pip install kubernetes redis
+
+
+# Run the custom scheduler
+CMD ["python", "/app/custom_trial4.py"]

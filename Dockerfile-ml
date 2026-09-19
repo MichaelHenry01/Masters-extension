@@ -1,0 +1,19 @@
+# Use Python as the base image
+FROM python:3.9
+
+# Set the working directory
+WORKDIR /app
+
+# Copy all code into the container
+COPY . /app/
+
+# Install Python dependencies
+RUN pip install numpy requests kubernetes redis
+
+# Install Redis CLI (used to check gate key)
+RUN apt-get update && apt-get install -y redis-tools && apt-get clean
+
+
+ENTRYPOINT ["python", "-u", "/app/train.py"]
+
+
